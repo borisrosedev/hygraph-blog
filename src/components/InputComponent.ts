@@ -1,4 +1,6 @@
-export default function (input: any) {
+import { InputInterface } from "../interfaces/Input";
+
+export default function (input: InputInterface) {
 
     return (
         `

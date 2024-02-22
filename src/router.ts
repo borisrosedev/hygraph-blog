@@ -1,6 +1,7 @@
+import { RouterType } from "./interfaces/Router";
 
 
-type RouterType = (p: string, h: string) => void
+
 
 declare global {
     interface Window {
@@ -21,8 +22,8 @@ function router(pathname: string, hash: string): void {
         console.log('🌲 Racine ')
     }
 
-    if (isRoot && hash == '#products') {
-        console.log('🛍️ Products')
+    if (isRoot && hash == '#articles') {
+        console.log('🛍️ Articles')
     }
 
     if (isRoot && hash == '#login') {

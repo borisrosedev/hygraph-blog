@@ -1,0 +1,1 @@
+export type RouterType = (p: string, h: string) => void
