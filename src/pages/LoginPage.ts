@@ -5,7 +5,6 @@ export default function () {
         `
             ${HeaderComponent()}
             <main class="main login__main">
-
                 <h1> Page de Connexion/Inscription </h1>
                 <section id="login__form-section">
                 </section>

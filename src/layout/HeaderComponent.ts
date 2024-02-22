@@ -1,7 +1,7 @@
 export default function() {
     return(
         `
-            <header>
+            <header class="app__header">
                 <figure></figure>
                 <nav>
                     <ul>
@@ -11,7 +11,7 @@ export default function() {
                         </a>
                         </li>
                         <li>
-                            <a>
+                            <a  href="/cart">
                                 <i class="fa-solid fa-bag-shopping"></i>
                             </a>
                         </li>
@@ -21,7 +21,7 @@ export default function() {
                             </a>
                         </li>
                         <li>
-                            <a>
+                            <a href="#login">
                             <i class="fa-solid fa-right-to-bracket"></i>
                             </a>
                         </li>

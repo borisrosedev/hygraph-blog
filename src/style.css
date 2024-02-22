@@ -54,10 +54,23 @@ button {
   border: none;
   box-shadow: 0 3px gray;
   cursor: pointer;
+  transition: all 500ms ease-in-out;
 }
 
 button:active {
   transform: translateY(2px);
+}
+
+button:hover {
+  background-color: var(--primary-color);
+}
+
+.button--big {
+  padding: 10px 30px;
+}
+
+.button--small {
+  padding: 5px 20px;
 }
 
 
@@ -71,6 +84,8 @@ button:active {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--primary-color);
+  box-shadow: 1px 1px 5px gray;
 
 }
 
@@ -85,7 +100,266 @@ button:active {
   transform: scale(0.7);
 }
 
+.app__header ul {
+  display: flex;
+}
+
+.app__header li {
+  margin: 10px;
+}
+
+
 .main {
   display: flex;
   padding-top: 8vh;
+}
+
+
+.not-found__main {
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.not-found__message-section h1 {
+  color: rgb(215, 78, 78);
+  margin: 0;
+}
+
+.not-found__message-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 1px 5px gray;
+  padding: 10px;
+  opacity: 0;
+  animation: MessageDown 500ms ease-in-out forwards;
+
+}
+
+.not-found__message-section a {
+   position: relative;
+}
+
+.not-found__message-section a::after {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 3px;
+  background-color: black;
+  content: "";
+  transition: all 500ms ease-in-out;
+  width: 0;
+
+}
+
+.not-found__message-section a:hover::after {
+  width: 100%;
+
+}
+
+
+.login__main {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.login__main h1 {
+    text-align: center;
+}
+
+.home__main {
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__cube-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 50px auto;
+ 
+
+}
+
+.home__actions {
+  margin-block: 20px;
+  display: flex;
+
+  opacity: 0;
+  animation: actions 500ms ease-in-out 2s forwards;
+}
+
+.home__actions button {
+  margin-inline: 10px;
+}
+
+.cube {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(45deg) rotateY(45deg);
+}
+.face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+
+
+}
+
+.front {
+  transform: translateZ(100px);
+  animation: front 2s ease-in-out forwards;
+
+}
+
+.back {
+  transform: translateZ(-100px);
+  animation: back 2s ease-in-out forwards;
+ 
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(100px);
+  animation: right 2s ease-in-out forwards;
+
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+  animation: left 2s ease-in-out forwards;
+
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+  animation: top 2s ease-in-out forwards;
+
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+  animation: bottom 2s ease-in-out forwards;
+  
+}
+
+
+
+
+@keyframes front {
+
+  from {
+    transform: translateZ(200px);
+  }
+
+  to {
+    transform: translateZ(50px); 
+  }
+  
+}
+
+@keyframes back {
+
+  from {
+    transform: translateZ(-200px); 
+  }
+
+  to {
+    transform: translateZ(-50px); 
+  }
+  
+}
+
+
+
+@keyframes right {
+
+  from {
+    transform: rotateY(90deg) translateZ(200px); 
+  }
+
+  to {
+    transform: rotateY(90deg) translateZ(50px); 
+  }
+  
+}
+
+@keyframes left {
+
+  from {
+    transform: rotateY(-90deg) translateZ(200px); 
+  }
+
+  to {
+    transform: rotateY(-90deg) translateZ(50px); 
+  }
+  
+}
+
+
+
+
+@keyframes top {
+
+  from {
+    transform: rotateX(90deg) translateZ(200px); 
+  }
+
+  to {
+    transform: rotateX(90deg) translateZ(50px); 
+  }
+  
+}
+
+
+@keyframes bottom {
+
+  from {
+    transform: rotateX(-90deg) translateZ(200px); 
+  }
+
+  to {
+    transform: rotateX(-90deg) translateZ(50px); 
+  }
+  
+}
+
+
+@keyframes actions {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes MessageDown {
+  from {
+    opacity: 0;
+    transform: translateY(-300px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }

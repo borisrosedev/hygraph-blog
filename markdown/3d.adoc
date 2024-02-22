@@ -1,0 +1,121 @@
+= Les propriétés 3D de CSS 
+
+== transform-style
+
+Cette propriété définit comment les enfants d'un élément transformé dans l'espace 3D sont rendus. 
+
+
+=== ...
+
+La valeur par défaut est flat, ce qui signifie que les enfants ne sont pas affectés par la transformation. 
+
+
+=== preserve-3d
+Vous pouvez également utiliser preserve-3d pour conserver la perspective 3D.
+
+
+[source, css]
+----
+.container {
+    transform-style: preserve-3d;
+}
+----
+
+== transforme
+
+Cette propriété est essentielle pour la transformation 3D. 
+
+Vous pouvez effectuer des rotations, des translations et des échelles sur un élément.
+
+[source, css]
+----
+.box {
+    transform: rotateY(45deg) translateZ(50px);
+}
+----
+
+== perspective
+
+Cette propriété définit la perspective 3D pour un élément enfant. Elle affecte la manière dont les éléments sont projetés dans l'espace 3D.
+
+[source, css]
+----
+.container {
+    perspective: 1000px;
+}
+----
+
+== perspective-origin
+
+Cette propriété définit le point d'observation de la perspective 3D.
+
+[source, css]
+----
+.container {
+    perspective-origin: 50% 50%;
+}
+----
+
+
+== backface-visibility 
+
+Cette propriété définit si la face arrière d'un élément 3D est visible lorsqu'elle est tournée vers l'utilisateur.
+
+[source, css]
+----
+.box {
+    backface-visibility: hidden;
+}
+----
+
+== transform-origin 
+
+Cette propriété définit le point d'origine des transformations 3D.
+[source, css]
+----
+.box {
+    transform-origin: 50% 50%;
+}
+----
+
+
+== translateX, translateY, translateZ : Ces fonctions de transformation déplacent un élément le long de l'axe X, Y ou Z respectivement.
+
+[source, css]
+----
+.box {
+    transform: translateX(50px);
+}
+----
+
+== rotateX, rotateY, rotateZ 
+
+Ces fonctions de transformation effectuent une rotation autour de l'axe X, Y ou Z respectivement.
+
+
+[source, css]
+----
+.box {
+    transform: rotateX(45deg);
+}
+----
+
+== scaleX, scaleY, scaleZ 
+
+Ces fonctions de transformation appliquent une échelle le long de l'axe X, Y ou Z respectivement.
+
+
+[source, css]
+----
+.box {
+    transform: scaleX(1.5);
+}
+----
+
+
+
+
+
+
+
+

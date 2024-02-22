@@ -5,8 +5,10 @@ export default function () {
         `
             ${HeaderComponent()}
             <main class="main not-found__main">
-                <section>
-                <h1> Page 404 </h1>
+                <section class="not-found__message-section">
+                    <h1> 404 </h1>
+                    <p>La page que vous cherchez n'existe pas <p>
+                    <a href="/">Retour à la page d'accueil</a>
                 </section>
             </main>
         

@@ -1,4 +1,5 @@
 import { RouterType } from "../interfaces/Router";
+import generator from "../utils/console-generator"
 
 export class HomeContainer {
     onNavigate: RouterType;

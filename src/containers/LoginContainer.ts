@@ -1,7 +1,22 @@
 import FormComponent from "../components/FormComponent";
+import { RouterType } from "../interfaces/Router";
+import generator from "../utils/console-generator";
 
 export class LoginContainer {
-    constructor() {
+    onNavigate: RouterType;
+    consoleGenerator: any
+
+    constructor(onNavigate:RouterType) {
+        this.consoleGenerator = generator([
+            "Login Container Constructor : called ✅",
+            "logOptionHandler : called ✅",
+            "formHandler : called ✅"
+        ]);
+
+        this.onNavigate = onNavigate
+        this.consoleGenerator.next().value
+       
+
 
     }
 
