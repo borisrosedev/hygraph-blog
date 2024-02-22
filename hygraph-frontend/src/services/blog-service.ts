@@ -1,7 +1,6 @@
 import { request } from 'graphql-request';
 
 const endpoint = import.meta.env.VITE_QUERY_AND_MUTATE_API;
-console.log(endpoint)
 
 export class BlogService {
 

@@ -1,10 +1,12 @@
 import './style.css'
 import { BlogService } from "./services/blog-service"
+import router from "./router"
+
+
+
 
 const init = async() => {
-  console.log('hello');
-  const blogService = new BlogService();
-  blogService.fetchArticles()
+  router();
 }
 
 window.addEventListener('DOMContentLoaded', init)
